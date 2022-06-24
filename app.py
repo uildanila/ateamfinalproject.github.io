@@ -16,7 +16,7 @@ app.register_blueprint(dashboardapp)
 def index():
     return render_template("/index.html")
 
-@app.route('/rfm-segmentation', methods = ["POST"])
+@app.route('/predict', methods = ["POST"])
 def predict():
     df_rfm = pd.read_csv("df_rfm.csv")[['customer', 'inactive_days', 'number_of_orders', 'total_payment']]
 
