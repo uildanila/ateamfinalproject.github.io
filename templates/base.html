@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta Tags -->
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+  <link rel="manifest" href="/ico/site.webmanifest">
+  <link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/ico/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/ico/android-icon-192x192.png">
+
+
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+  <!-- Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/nestable.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/jstree/themes/default/style.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/extensions/bootstrap-treeview.min.css">
+
+  <!-- BEGIN: Vendor CSS-->
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/vendors.min.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/icheck.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/icheck/custom.css"> -->
+  <!-- END: Vendor CSS-->
+
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/core/menu/menu-types/vertical-menu.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/core/colors/palette-gradient.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/extensions/ex-component-treeview.css">
+
+  <!-- BEGIN: Page CSS-->
+
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/forms/checkboxes-radios.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/vendors/css/forms/toggle/switchery.min.css">
+  <link rel="stylesheet" type="text/css" href="/app-assets/css/plugins/forms/switch.css">
+
+
+
+  <title></title>
+  <style>
+    .footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .footer a:hover {
+      text-decoration: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #navbarNavAltMarkup .nav-link {
+      align-items: center;
+
+    }
+
+    .navbar{
+      background: -webkit-linear-gradient(bottom, rgba(9, 138, 63, 0.3) 2%,  #1128d0);
+      background: linear-gradient(180deg, transparent 1, rgba(28, 9, 138, 0.3) 5%,  #1128d0);
+      background-color: #1128d0;
+    }
+    #navbarNavAltMarkup .nav-link:hover {
+      color: #9cf397 !important;
+    }
+
+    .active{
+      color: #9cf397;
+    }
+
+    h2{
+      color:  #1128d0;
+    }
+    .image-background-holder image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    }
+
+    .image-background-content {
+    position: relative;
+    z-index: 2;
+    }
+
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 0px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #555555;
+      border-radius: 4px;
+    }
+
+    .search-btn {
+      background-color: #fff;
+    }
+
+    .search-btn:hover {
+      background-color: #97d9f3;
+    }
+  </style>
+  {% block style_ %}
+  {% endblock %}
+
+</head>
+
+<body>
+
+  <!-- navigasi -->
+  <nav class="navbar navbar-expand-lg py-3 shadow-lg">
+    <a class="navbar-brand mx-0" href="#">
+      <img src="/ico/apple-touch-icon.png" alt="" style="width: 50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <h4 class="nav-link disabled ml-0 my-auto font-weight-bold text-light" href="#">Final Project</h4>
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link {% if active_page == 'home' %}active{% else %}text-white{% endif %} text-left" href="{{ url_for('dashboardapp.home') }}">Home</a>
+        <a class="nav-link {% if active_page == 'rfm' %}active{% else %}text-white{% endif %} text-left" href="{{ url_for('dashboardapp.rfm') }}">RFM Segmentation</a>
+        <a class="nav-link {% if active_page == 'recsys' %}active{% else %}text-white{% endif %}" href="{{ url_for('dashboardapp.recsys') }}">Product Recommendation</a>
+        <a class="nav-link {% if active_page == 'recsys' %}active{% else %}text-white{% endif %}" href="{{ url_for('dashboardapp.recsys') }}">Visualizations</a>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="image-background-holder shadow-lg">
+  <img src="images/dataset-cover.png" alt="" class="w-100" style="height: 320px;">
+</div>
+</div>
+
+
+
+  
+  
+  {% block content_ %}
+  {% endblock %}
+
+
+  <footer class="bg-primary text-white">
+    <div class="container-fluid py-3" style="background-color:  #1128d0;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="my-auto" style="font-size: 11px;"> <b>Ⓒ JCDS 2022.</b> Final Project: RFM Customer Segementation and Recommendation System Model.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</body>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/sticky/sticky.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+
+<!-- BEGIN: Vendor JS-->
+<script src="/app-assets/vendors/js/vendors.min.js"></script>
+<!-- BEGIN Vendor JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/app-assets/vendors/js/extensions/nestable.js"></script>
+<script src="/app-assets/vendors/js/extensions/jstree.js"></script>
+<script src="/app-assets/vendors/js/extensions/bootstrap-treeview.min.js"></script>
+<!-- END: Page Vendor JS-->
+<script src="/app-assets/vendors/js/forms/icheck/icheck.min.js"></script>
+
+<!-- BEGIN: Theme JS-->
+<script src="/app-assets/js/core/app-menu.js"></script>
+<script src="/app-assets/js/core/app.js"></script>
+<!-- END: Theme JS-->
+
+<script src="/app-assets/js/scripts/forms/checkbox-radio.js"></script>
+<script src="/app-assets/vendors/js/forms/toggle/bootstrap-checkbox.min.js"></script>
+<script src="/app-assets/vendors/js/forms/toggle/switchery.min.js"></script>
+<script src="/app-assets/js/scripts/forms/switch.js"></script>
+
+<!-- BEGIN: Custom CSS-->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- END: Custom CSS-->
+{% block script_ %}
+{% endblock %}
+
+
+</html>

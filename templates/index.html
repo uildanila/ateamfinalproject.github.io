@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% set active_page = "home" %}
+{% block style_ %}
+<style>
+    .tryrfm a:hover{
+        text-decoration: none;
+    }
+</style>
+
+{% endblock %}
+
+{% block content_ %}
+
+
+
+<div class="container-fluid py-4">
+  <div class="row my-4">
+    <div class="col-8 text-center my-2 mx-auto">
+      <h2 class="mb-4">Hello, Welcome to Our Page!</h2>
+      <hr>
+      <h5 class="font-weight-bold pt-4">Project Description</h5>
+      <br>
+      <p class="text-center">
+        This project is one of the processes of the Purwadhika Digital School Data Science Bootcamp program, and was compiled by the The A team consisting of
+        <b>Bayu Fathurrahman, Giovano Aditya Graha, Nila Wildanul Husna </b>
+        
+      </p>
+      <br>
+      <p class="mx-4">
+        We used <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce?select=olist_products_dataset.csv">Brazilian E-Commerce Public Dataset</a>  by Olist from Kaggle. This dataset contains details of more than 100.000 orders from 2016 to 2018, made at multiple marketplaces in Brazil. Its features allows us to analyze order from various dimensions: from order status, price, payment and freight price, to customer's location, product attributes, and reviews written by customers. We also geolocation data available.
+
+      For this project, we will apply RFM Analysis and K-means clustering to segment customers into different clusters based on their behavioral characteristics. And we will use recommendation system model to get product recommendation for the certain certain of customer. </p>
+    </div>
+  </div>
+
+  <div class="row my-4">
+    <div class="col-8 text-center my-2 mx-auto">
+      <h5 class="font-weight-bold">About Olist eCommerce</h5>
+      <p class="mx-4 mt-4">
+        <b style="color: #1128d0;">
+          Olist is a Brazilian E-commerce </b> which currently planning to improve performance by determining the marketing methods provided to customers with different needs, characteristics or behaviors. The company has a dataset of every transaction in this E-commerce, we as data scientists at the Olist company have a role to provide insights and recommendations from the dataset, so that the company can continue to grow. The company wants to improve sales performance with effective and efficient marketing methods, so that it requires Customer Segmentation and Product Recommendations with the best reviews according to customer needs.
+      </p>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-8 mx-auto">
+      <h2 class="mb-4">RFM Metrics</h2>
+      <hr>
+    </div>
+  </div>
+  
+  <div class="row py-4 mx-auto ">
+    <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 ml-auto ">
+      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+        <div class="card-body">
+          <h4>Recency</h4>
+          <hr class="bg-light">
+          <p class="card-text">
+            The freshness of customer activity, be it purchases or visit
+            <br><br>
+            <i>E.g Time since last order or last engaged with the product</i>            
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 m-0">
+      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+        <div class="card-body">
+          <h4>Frequency</h4>
+          <hr class="bg-light">
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, repellat?
+            <br><br>
+            <i>E.g Time since last order or last engaged with the product</i>            
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 mr-auto">
+      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+        <div class="card-body">
+          <h4>Monetary</h4>
+          <hr class="bg-light">
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, temporibus?
+            <br><br>
+            <i>E.g Time since last order or last engaged with the product</i>            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-9 mx-auto">
+        <a href="{{ url_for('dashboardapp.rfm') }}" class="tryrfm">
+      <button type="button" class="btn btn-outline-success btn-lg btn-block mt-4">Try Our RFM Model</button>
+    </a>
+    </div>
+  </div>
+
+  <div class="row text-center pt-4">
+    <div class="col-8 mx-auto">
+      <h2 class="mb-4 text-danger">INFORMATION</h2>
+      <hr>
+      <p class="py-4">
+        Before you try our model, make sure the dataset contains the information in below
+      </p>
+      <p><b>Data Schemas</b></p>
+      <img src="images/data chemas.png" alt="" class="w-100">
+    </div>
+  </div>
+
+  <div class="row" style="height: 300px;"></div>
+</div>
+
+{% endblock %}
+
+{% block script_ %}
+
+{% endblock %}

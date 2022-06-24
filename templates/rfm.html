@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% set active_page = "rfm" %}
+{% block style_ %}
+<style>
+    .mytable {
+    font-size: 11pt; 
+    border-collapse: collapse; 
+    border: 1px solid silver;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .mytable th{
+        background-color: #1128d0;
+        color: white;
+    }
+    .mytable td, th {
+        padding: 10px;
+    }
+
+    .mytable tr:nth-child(even) {
+        background: #E0E0E0;
+    }
+
+    .mytable tr:hover {
+        background: silver;
+        cursor: pointer;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block content_ %}
+
+
+<div class="container-fluid pt-4">
+
+    <div class="row" style="height: 10px;"></div>
+    <div class="row text-center pt-4">
+        <div class="col-8 mx-auto pt-4">
+          <h2 class="mb-4">Customer Segmentation Result Analysis</h2>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <div class="row pb-4 mx-auto">
+        <div class="col-7 m-auto text-center">
+            <div class='tableauPlaceholder' id='viz1656065166691'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;5K&#47;5KHCNSS65&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;5KHCNSS65' /> <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;5K&#47;5KHCNSS65&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' />
+                </object>
+            </div>                
+            
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1656065166691');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='827px';} 
+                else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='827px';} 
+                else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+          
+          
+        </div>
+    </div>
+
+    <div class="row text-center pt-4">
+        <div class="col-8 mx-auto pt-4">
+          <h2 class="mb-4">Test New Data Customer</h2>
+          <hr>
+        </div>
+        <div class="col-5 mx-auto">
+            <form action="{{ url_for('predict')}}" method="post">
+                <div class="form-row">
+                  <div class="col-md-12 mb-3 mx-auto">
+                    <label for="validationTooltip03">Customer Identity (ID)</label>
+                    <input type="text" class="form-control is-valid" id="validationTooltip03" name="customer_id" required>
+                    <div class="valid-feedback">
+                        input customer id starts with intitial T. ex: T1234
+                      </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="validationServer02">Inactive Days</label>
+                    <input type="number" class="form-control is-valid" id="inactiveday" name="inactive_days" required>
+                    <div class="valid-feedback">
+                      inactive days valid from 0 
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="validationServer02">Number of Orders</label>
+                    <input type="number" class="form-control is-valid" id="numberorder" name="number_of_orders" required>
+                    <div class="valid-feedback">
+                      number of orders valid from 1 to 15
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-12 mb-3">
+                    <label for="validationServer02">Total Payment</label>
+                    <input type="number" class="form-control is-valid" id="totalpayment" name="total_payment" required>
+                    <div class="valid-feedback">
+                      total payment valid from R$ 9.95 to R$7,571
+                    </div>
+                  </div>
+                </div>
+                
+                <button class="btn btn-success" type="submit">Find the Result</button>
+
+                <br><br>
+            </form>
+                
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-5 bg-light text-black my-auto text-center mx-auto py-4" >
+            <p class="my-auto font-weight-bold">{{ prediction_text }}</p>
+        </div>
+    </div>
+
+    <div class="row mx-auto">
+        <div class="col-11 text-black my-auto text-center mx-auto py-4" >
+            {{data | safe}}
+        </div>
+    </div>
+
+    <div class="row" style="height: 100px;"></div>
+   
+
+
+</div>
+
+{% endblock %}
+
+{% block script_ %}
+
+
+{% endblock %}
