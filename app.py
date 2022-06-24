@@ -27,7 +27,7 @@ def predict():
     test = pd.DataFrame(columns=['inactive_days','number_of_orders','total_payment', 'customer'])
     test.loc[0] = customer
     test = test[['customer', 'inactive_days', 'number_of_orders', 'total_payment']]
-    df_rfm = df_rfm.append(test, ignore_index=True)
+    df_rfm = pd.concat([df_rfm, test], ignore_index=True)
 
     list_segment = []
 
