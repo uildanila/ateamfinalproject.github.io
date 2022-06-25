@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% set active_page = "visualizations" %}
+{% block style_ %}
+<style>
+    .mytable {
+    font-size: 11pt; 
+    border-collapse: collapse; 
+    border: 1px solid silver;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .mytable th{
+        background-color: #1127d028;
+        color: black;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .mytable td, th {
+        padding: 10px;
+    }
+
+
+    .mytable tr:hover {
+        background: silver;
+        cursor: pointer;
+    }
+    
+</style>
+
+{% endblock %}
+
+{% block content_ %}
+
+<div class="container-fluid pt-4 bg-light shadow-lg pb-4">
+    
+    <div class="row" style="height: 100px;"></div>
+
+</div>
+
+
+{% endblock %}
+
+{% block script_ %}
+
+{% endblock %}

@@ -2,6 +2,30 @@
 {% set active_page = "recsys" %}
 {% block style_ %}
 <style>
+    .mytable {
+    font-size: 11pt; 
+    border-collapse: collapse; 
+    border: 1px solid silver;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .mytable th{
+        background-color: #1127d028;
+        color: black;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .mytable td, th {
+        padding: 10px;
+    }
+
+
+    .mytable tr:hover {
+        background: rgb(242, 242, 242);
+        cursor: pointer;
+    }
     
 </style>
 
@@ -9,8 +33,97 @@
 
 {% block content_ %}
 
+<div class="container-fluid pt-4 bg-light shadow-lg pb-4">
+    <div class="row" style="height: 10px;"></div>
+    <div class="row text-center pt-4">
+      <div class="col-8 mx-auto pt-4">
+        <h2 class="mb-4">List of Customer in Segment C (Need Attention) </h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row pb-4 mx-auto">
+      <div class="col-5 m-auto text-center">
+        <div class='tableauPlaceholder' id='viz1656171025710'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerC&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                <param name='name' value='CustomerC&#47;Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Cu&#47;CustomerC&#47;Dashboard1&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+            var divElement = document.getElementById('viz1656171025710');                    
+            var vizElement = divElement.getElementsByTagName('object')[0];                    
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='500px';vizElement.style.height='400px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='500px';vizElement.style.height='400px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='440px';}                     
+            var scriptElement = document.createElement('script');                    
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        
+      </div>
+    </div>
+  </div>
 
-<h1>Test</h1>
+<div class="container-fluid">
+    <div class="row" style="height: 10px;"></div>
+    <div class="row text-center pt-4">
+        <div class="col-8 mx-auto pt-4">
+        <h2 class="mb-4">Input Customer</h2>
+        <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mx-auto">
+            <form action="{{ url_for('recsys')}}" method="post">
+                <div class="form-group row">
+                  <label for="inputcustomer" class="col-sm-2 col-form-label">CustomerID</label>
+                  <div class="col-sm-5 ml-auto">
+                    <input type="text" class="form-control" name='customer_id' id="inputcustomer">
+                  </div>
+                  <div class="col-sm-3 mr-auto">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
+                </div>
+                
+                <!-- <div class="form-group row pt-4">
+                  <div class="col-sm-10 mx-auto">
+                    <button type="submit" class="btn btn-primary">Show Recommendation Product</button>
+                  </div>
+                </div> -->
+              </form>
+
+        </div>
+        <div class="col-11 text-black my-auto text-center mx-auto py-4" >
+            <p>{{ showMessage }}</p>
+            {{data | safe}}
+        </div>
+    </div>
+
+    {% if condition == False %}
+    <div class="row bg-light">
+        <div class="col-5 bg-light text-black my-auto text-center mx-auto py-4" >
+            <p class="my-auto">Previous product categories purchased by Customer {{ cust }} : <br> <i><b> {{ resultPrev }}</b></i></p>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row" style="height: 100px;"></div>
+
+</div>
+
 
 {% endblock %}
 

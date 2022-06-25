@@ -5,6 +5,16 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Meta Tags -->
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/ico/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ico/favicon-16x16.png">
+  <link rel="manifest" href="/ico/site.webmanifest">
+  <link rel="mask-icon" href="/ico/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/ico/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="/ico/android-icon-192x192.png">
+
 
   <!-- FontAwesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
@@ -152,7 +162,7 @@
         <a class="nav-link {% if active_page == 'home' %}active{% else %}text-white{% endif %} text-left" href="{{ url_for('dashboardapp.home') }}">Home</a>
         <a class="nav-link {% if active_page == 'rfm' %}active{% else %}text-white{% endif %} text-left" href="{{ url_for('dashboardapp.rfm') }}">RFM Segmentation</a>
         <a class="nav-link {% if active_page == 'recsys' %}active{% else %}text-white{% endif %}" href="{{ url_for('dashboardapp.recsys') }}">Product Recommendation</a>
-        <a class="nav-link {% if active_page == 'recsys' %}active{% else %}text-white{% endif %}" href="{{ url_for('dashboardapp.recsys') }}">Visualizations</a>
+        <a class="nav-link {% if active_page == 'visualizations' %}active{% else %}text-white{% endif %}" href="{{ url_for('dashboardapp.visualizations') }}">Visualizations</a>
       </div>
     </div>
   </nav>
@@ -175,7 +185,7 @@
     <div class="container-fluid py-3" style="background-color:  #1128d0;">
       <div class="row">
         <div class="col-12 text-center">
-          <p class="my-auto" style="font-size: 11px;"> <b>Ⓒ JCDS 2022.</b> Final Project: RFM Customer Segementation and Recommendation System Model.</p>
+          <p class="my-auto" style="font-size: 11px;"> <b>Ⓒ JCDS 2022.</b> Final Project: <i> RFM Customer Segementation and Recommendation System Model</i>.</p>
         </div>
       </div>
     </div>
