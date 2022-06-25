@@ -19,3 +19,4 @@ Pyrebase4==4.4.3
 numpy==1.23.0
 pandas==1.4.2
 scikit-learn==1.1 
+gcsfs==0.2.3
