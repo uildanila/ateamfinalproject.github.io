@@ -14,3 +14,7 @@ def rfm():
 def recsys():
     return render_template("recsys.html")
 
+@dashboardapp.route('/visualizations')
+def visualizations():
+    return render_template("visualizations.html")
+
