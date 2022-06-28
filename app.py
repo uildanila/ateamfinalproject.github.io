@@ -20,13 +20,7 @@ def index():
 
 @app.route('/predict', methods = ["POST"])
 def predict():
-    # df_rfm = pd.read_csv("df_rfm.csv")[['customer', 'inactive_days', 'number_of_orders', 'total_payment']]
-    url='https://drive.google.com/file/d/1ia8mm7tTb8HJRr29DBY7hyx0DbzreqkD/view?usp=sharing'
-    file_id = url.split('/')[-2]
-    df_rfm='https://drive.google.com/uc?id=' + file_id
-    url = requests.get(df_rfm).text
-    df_rfm = StringIO(url)
-    df_rfm = pd.read_csv(df_rfm)[['customer', 'inactive_days', 'number_of_orders', 'total_payment']]
+    df_rfm = pd.read_csv("df_rfm.csv")[['customer', 'inactive_days', 'number_of_orders', 'total_payment']]
 
     features = [x for x in request.form.values()]
     customer = [float(x) for x in [features[1], features[2], features[3]]]
