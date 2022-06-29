@@ -1,4 +1,4 @@
-# Final Project The A Team - 
+# Final Project The A Team - RFM Customer Segmentation and Product Recommendation
 
 Check it out here https://ateamfinalproject.herokuapp.com/
 
