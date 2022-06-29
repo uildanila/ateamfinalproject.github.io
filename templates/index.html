@@ -45,7 +45,7 @@
 
   <div class="row text-center">
     <div class="col-8 mx-auto">
-      <h2 class="mb-4">RFM Metrics</h2>
+      <h2 class="mb-4">RFM Customer Segmentation Metrics</h2>
       <hr>
     </div>
   </div>
@@ -97,6 +97,29 @@
     <div class="col-9 mx-auto">
         <a href="{{ url_for('dashboardapp.rfm') }}" class="tryrfm">
       <button type="button" class="btn btn-outline-success btn-lg btn-block mt-4">Try Our RFM Model</button>
+    </a>
+    </div>
+  </div>
+
+  <div class="row" style="height: 100px;"></div>
+
+  <div class="row text-center">
+    <div class="col-8 mx-auto">
+      <h2 class="mb-4">Product Recommendation</h2>
+      <hr>
+    </div>
+  </div>
+  
+  <div class="row py-4 mx-auto">
+    <div class="col-8 text- mx-auto">
+      <p class="text-center">The recommendation system in this project is using Singular value decomposition (SVD), a collaborative filtering method for product recommendation. The aim for the code implementation is to provide customers with product's recommendation from the latent features of item-customer matrices. The code would show you how to use the SVD latent factor model for matrix factorization. <br> <br> This product recommendation will be implemented for the customer in segment C to increase their recency, frequency, and monetary. It can be impactfull for our business becuase, so it can increase our revenue</p>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-9 mx-auto">
+        <a href="{{ url_for('dashboardapp.recsys') }}" class="tryrfm">
+      <button type="button" class="btn btn-outline-success btn-lg btn-block mt-4">Try Our Product Recommendation Model</button>
     </a>
     </div>
   </div>
