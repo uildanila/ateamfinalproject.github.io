@@ -2,7 +2,7 @@
 {% set active_page = "home" %}
 {% block style_ %}
 <style>
-    .tryrfm a:hover{
+    .tryrfm:hover{
         text-decoration: none;
     }
 </style>
@@ -50,43 +50,43 @@
     </div>
   </div>
   
-  <div class="row py-4 mx-auto ">
+  <div class="row py-4 mx-auto">
     <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 ml-auto ">
-      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+      <div class="card text-light pb-4" style="width: 100%; background-color: #1128d0;">
         <div class="card-body">
           <h4>Recency</h4>
           <hr class="bg-light">
           <p class="card-text">
             The freshness of customer activity, be it purchases or visit
             <br><br>
-            <i>E.g Time since last order or last engaged with the product</i>            
+            <i>E.g Time since last order or last engaged with the product</i> <br> <br>           
           </p>
         </div>
       </div>
     </div>
 
     <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 m-0">
-      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+      <div class="card text-light pb-4" style="width: 100%; background-color: #1128d0;">
         <div class="card-body">
           <h4>Frequency</h4>
           <hr class="bg-light">
           <p class="card-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, repellat?
+            The frequency f the customer transactions or visits
             <br><br>
-            <i>E.g Time since last order or last engaged with the product</i>            
+            <i>E.g Total number of transactions or average time etweek transactions/ engaged visits</i>            
           </p>
         </div>
       </div>
     </div>
     <div class="col-lg-3 col-md-12 col-xs-12 col-sm-12 mb-4 mr-auto">
-      <div class="card text-light py-2" style="width: 100%; background-color: #1128d0;">
+      <div class="card text-light pb-4" style="width: 100%; background-color: #1128d0;">
         <div class="card-body">
           <h4>Monetary</h4>
           <hr class="bg-light">
           <p class="card-text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, temporibus?
+            The intention of customer to spend or purchasing power f customer
             <br><br>
-            <i>E.g Time since last order or last engaged with the product</i>            
+            <i>E.g Total or average transactions value</i> <br> <br>            
           </p>
         </div>
       </div>
@@ -98,18 +98,6 @@
         <a href="{{ url_for('dashboardapp.rfm') }}" class="tryrfm">
       <button type="button" class="btn btn-outline-success btn-lg btn-block mt-4">Try Our RFM Model</button>
     </a>
-    </div>
-  </div>
-
-  <div class="row text-center pt-4">
-    <div class="col-8 mx-auto">
-      <h2 class="mb-4 text-danger">INFORMATION</h2>
-      <hr>
-      <p class="py-4">
-        Before you try our model, make sure the dataset contains the information in below
-      </p>
-      <p><b>Data Schemas</b></p>
-      <img src="images/data chemas.png" alt="" class="w-100">
     </div>
   </div>
 
