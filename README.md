@@ -21,7 +21,13 @@ If you need to run or update the app
 
 ### 3. Run the Web App
 ```bash
-> python app.py
+
+For Windows
+> python app.py 
+
+For MacOS
+> python3 app.py 
+
 * Serving Flask app "app" (lazy loading)
 * Environment: production
   WARNING: This is a development server. Do not use it in a production deployment.
